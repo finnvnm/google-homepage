@@ -1,106 +1,54 @@
-/* body {
-    display: flex;
-    flex-direction: column;
-    margin: 10px 10px;
-}
-
-nav {
-    text-align: right;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-.nav-dummy {
-    flex-grow: 1;
-}
-
-.main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-self: center;
-}
-
-input {
-    width: 50vmax;
-    height: 3vmax;
-    border-radius: 2vmax;
-    border-color: lightgray;
-    border-style: solid;
-}
-
-.spacing {
-    padding: 10px 10px;
-}
-
-button {
-    padding: 5px 10px;
-    margin: 10px 10px;
-    border-style: none;
-    background-color: lightgray;
-    color: rgb(87, 87, 87);
-}
-a {
-    padding: 10px;
-    text-decoration: none;
-    color: rgb(87, 87, 87);
-} */
-
 main {
     height: 98vh;
     box-sizing: border-box;
     margin: 1vh 1vw;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 2% 90% 4% 4%;
+    grid-template-rows: 20% 74% 2% 4%;
     grid-template-areas: 
         ". nav"
         "google google"
         "country ."
         "footer-left footer-right";
-    
 }
 
 nav {
     grid-area: nav;
     justify-self: end;
-    margin-right: 5%;
-    align-self: center;
+    align-self: flex-start;
 }
 
 .google {
     display: inline-grid;
     grid-area: google;
     justify-self: center;
-    align-self: center;
+    align-self: baseline;
     justify-items: center;
 }
 
 .country {
     grid-area: country;
-    justify-self: start;
-    align-self: center;
-    margin-left: 5%;
+    justify-self: flex-start;
+    align-self: flex-end;
 }
 
 .footer-left {
     grid-area: footer-left;
-    justify-self: start;
-    align-self: center;
-    margin-left: 5%;
+    justify-self: flex-start;
+    align-self: flex-end;
 }
 
 .footer-right {
     grid-area: footer-right;
-    justify-self: end;
-    align-self: center;
-    margin-right: 5%;
+    justify-self: flex-end;
+    align-self: flex-end;
 }
 
 a, .country {
-    padding: 10px;
+    padding: 0px 10px;
     text-decoration: none;
     color: rgb(87, 87, 87);
+    font-size: small;
 }
 
 input {
@@ -129,4 +77,9 @@ input {
     color: rgb(87, 87, 87);
     border-radius: 3px;
     background-color: rgb(228, 228, 228);
+    font-size: small;
+}
+
+button:hover {
+    background-color: rgb(243, 243, 243);
 }
